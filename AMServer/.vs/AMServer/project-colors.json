@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "2e3850d9-c910-4647-a217-9dafdbec3381": {
+      "ProjectGuid": "2e3850d9-c910-4647-a217-9dafdbec3381",
+      "DisplayName": "Model",
+      "ColorIndex": 0
+    },
+    "06fe4e36-199f-4130-84eb-4a12992d9993": {
+      "ProjectGuid": "06fe4e36-199f-4130-84eb-4a12992d9993",
+      "DisplayName": "console",
+      "ColorIndex": 1
+    },
+    "54679a88-1765-4473-9bae-eaa2f54a1dcc": {
+      "ProjectGuid": "54679a88-1765-4473-9bae-eaa2f54a1dcc",
+      "DisplayName": "AMServer",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
