@@ -21,4 +21,15 @@ public class SalaController : ControllerBase
             sala_Y = sala.sala_Y,
         };
     }
+
+    [HttpPut]
+    [Route("update")]
+    public object updateSala([FromBody] Sala sala)
+    {
+        var result = sala;
+
+        result.update(sala);
+        return new { status = "sucess" };
+    }
+
 }

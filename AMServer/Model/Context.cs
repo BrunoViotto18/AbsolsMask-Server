@@ -46,6 +46,7 @@ public class Context : DbContext
         {
             entity.HasKey(it => it.id);
             entity.HasOne(it => it.game);
+            entity.HasOne(it => it.itens);
         });
     }
 }

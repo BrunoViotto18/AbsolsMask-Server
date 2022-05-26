@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7zMbXbqhYp/6BEOmxAE+44wmJcB1fMTciIleWGMyFABnV9lCpE5ppEsbGsyxMnUhbxJefK28rlT70D+UlKpPeQ==",
+  "dgSpecHash": "25QtKyeRDQyyw8aVveoz9F9rvAERbdfHbMLciow8ajEQqejNFbF679aXE2rZQc1y5Hlt11Zbb9yMSfnXYJxxhQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aluno\\Desktop\\AMServer\\console\\console.csproj",
+  "projectFilePath": "C:\\Users\\Aluno\\Desktop\\AbsolsMask-Server\\AMServer\\console\\console.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aluno\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
