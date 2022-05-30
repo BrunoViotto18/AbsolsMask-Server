@@ -49,4 +49,22 @@ public class User
 
         return usuario;
     }
+
+    public static User? verificaUser(string login)
+    {
+        var usuario = new User();
+        using (var context = new Context())
+        {
+            var user = context.User.FirstOrDefault(a => a.login == login);
+
+            if (user != null)
+            {
+                usuario.login = user.login;
+                usuario.password = user.password;
+                usuario.id = user.id;
+            }
+        }
+
+        return usuario;
+    }
 }

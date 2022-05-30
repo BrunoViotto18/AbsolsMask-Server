@@ -9,13 +9,18 @@ namespace AMServer.Controllers;
 public class UserController : ControllerBase
 {
     [HttpPost]
-    [Route("register")]
-    public object resgisterUser([FromBody] User user)
+    [Route("register/{login}/{senha}")]
+    public object? resgisterUser(string login, string senha)
     {
+        User user = new User()
+        {
+            login = login,
+            password = senha
+        };
         var id = user.save();
         if (user.id == -1)
         {
-            return "usuario ja cadastrado";
+            return null;
         }
         else
         {
@@ -29,14 +34,29 @@ public class UserController : ControllerBase
     }
 
     [HttpGet]
-    [Route("login")]
-    public Object loginUser([FromBody] User user)
+    [Route("verifica/{login}/{senha}")]
+    public Object verificaUser(string login)
     {
+        var user = Model.User.verificaUser(login);
+        if(user != null && user.login != null)
+        {
+            return user.id;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    [Route("login/{login}/{senha}")]
+    public Object loginUser(string login, string senha)
+    {
+        var user = Model.User.loginUser(login, senha);
         if (user != null && user.login != null && user.password != null)
         {
             var userLogin = Model.User.loginUser(user.login, user.password);
             Response.Headers.Add("Access-Control-Allow-Origin", "*");
-            if (userLogin != null)
+            if (userLogin != null && user.login != null && user.password != null)
             {
                 return new
                 {
@@ -47,12 +67,12 @@ public class UserController : ControllerBase
             }
             else
             {
-                return BadRequest("Invalid credentials");
+                return 0;
             }
         }
         else
         {
-            return BadRequest("Invalid credentials");
+            return 0;
         }
     }
 }
