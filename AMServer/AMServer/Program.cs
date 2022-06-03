@@ -1,3 +1,11 @@
+using Model;
+
+//CREATE
+using (var context = new Context())
+{
+    context.Database.EnsureCreated();
+}
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
