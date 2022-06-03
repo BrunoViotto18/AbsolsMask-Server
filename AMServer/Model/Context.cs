@@ -10,7 +10,7 @@ public class Context : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Data Source = SNCCH01LABF113\\TEW_SQLEXPRESS; Initial Catalog = AbsolsMask; Integrated Security = True");
+        optionsBuilder.UseSqlServer("Data Source = SNCCH01LABF114\\TEW_SQLEXPRESS; Initial Catalog = AbsolsMask; Integrated Security = True");
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
